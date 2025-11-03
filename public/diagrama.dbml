@@ -6,3 +6,12 @@ Table propiedades {
     descripcion text
     estado varchar(50)
 }
+
+Table inquilinos {
+    id int [pk, increment] // Primary key, auto-incrementing
+    nombres varchar(100)
+    email varchar(100)
+    telefono varchar(20)
+    fecha_nacimiento date
+    documento_identidad varchar(50)
+}

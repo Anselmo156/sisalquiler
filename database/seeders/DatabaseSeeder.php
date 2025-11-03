@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Inquilino;
 use App\Models\Propiedad;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -15,6 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         Propiedad::factory(50)->create();
+        Inquilino::factory(50)->create();
 
         User::create([
             'name' => 'Admin',

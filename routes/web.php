@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Inquilinos;
 use App\Livewire\Propiedads;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
@@ -34,6 +35,10 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/propiedades', Propiedads::class)
     ->name('propiedades')
+    ->middleware(['auth']);
+
+Route::get('/inquilinos', Inquilinos::class)
+    ->name('inquilinos')
     ->middleware(['auth']);
 
 // require __DIR__.'/auth.php';
